@@ -1,0 +1,2170 @@
+/* Reset e Configurações Básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    /* Cores Premium */
+    --primary-green: #1a4d2e;
+    --secondary-green: #2d5a3d;
+    --accent-gold: #d4af37;
+    --warm-beige: #f7f3e9;
+    --cream: #faf8f3;
+    --earth-brown: #8b4513;
+    --sage-green: #9caf88;
+  
+    /* Tons Neutros */
+    --text-primary: #2c2c2c;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+    --white: #ffffff;
+    --off-white: #fefefe;
+  
+    /* Gradientes */
+    --gradient-primary: linear-gradient(135deg, #1a4d2e 0%, #2d5a3d 100%);
+    --gradient-warm: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    --gradient-soft: linear-gradient(135deg, #f7f3e9 0%, #faf8f3 100%);
+  
+    /* Sombras */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.1);
+  
+    /* Outros */
+    --border-radius: 16px;
+    --border-radius-sm: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Tipografia */
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.7;
+    color: var(--text-primary);
+    background-color: var(--cream);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text-primary);
+  }
+  
+  /* Controles ocultos */
+  .modal-toggle,
+  .menu-toggle,
+  .accordion-toggle {
+    display: none;
+  }
+  
+  /* Grain Overlay */
+  .grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.15) 1px, transparent 0);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  /* Header */
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    transition: var(--transition);
+  }
+  
+  .nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  
+  .logo-icon {
+    font-size: 2rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    transition: var(--transition);
+    padding: 8px 0;
+  }
+  
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-warm);
+    transition: var(--transition);
+    border-radius: 2px;
+  }
+  
+  .nav-link:hover {
+    color: var(--primary-green);
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Menu Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition);
+  }
+  
+  .hamburger:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .bar {
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-primary);
+    margin: 3px 0;
+    transition: var(--transition);
+    border-radius: 2px;
+  }
+  
+  /* Menu mobile ativo */
+  .menu-toggle:checked ~ .header .nav-menu {
+    left: 0;
+  }
+  
+  .menu-toggle:checked ~ .header .hamburger .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle:checked ~ .header .hamburger .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-toggle:checked ~ .header .hamburger .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* Hero Section */
+  .hero {
+    margin-top: 80px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--gradient-primary);
+    color: var(--white);
+  }
+  
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .hero-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    background-image: radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    background-size: 400px 400px;
+    animation: float 20s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(1deg);
+    }
+  }
+  
+  .hero-content {
+    flex: 1;
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+    padding: 0 24px;
+  }
+  
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+  }
+  
+  .hero-highlight {
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+  
+  .hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 120px;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    font-family: "Playfair Display", serif;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+    text-align: center;
+    opacity: 0.9;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gradient-warm);
+    color: var(--text-primary);
+    padding: 16px 32px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow-lg);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+  }
+  
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    padding: 16px 32px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+  }
+  
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+  }
+  
+  /* Hero Visual */
+  .hero-visual {
+    flex: 1;
+    position: relative;
+    height: 500px;
+    z-index: 2;
+  }
+  
+  .floating-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    color: var(--text-primary);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-xl);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: floatCard 6s ease-in-out infinite;
+  }
+  
+  .floating-card:nth-child(1) {
+    top: 20%;
+    right: 20%;
+    animation-delay: 0s;
+  }
+  
+  .floating-card-2 {
+    top: 50%;
+    right: 40%;
+    animation-delay: 2s;
+  }
+  
+  .floating-card-3 {
+    top: 70%;
+    right: 10%;
+    animation-delay: 4s;
+  }
+  
+  @keyframes floatCard {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-15px) rotate(1deg);
+    }
+  }
+  
+  .floating-card .card-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  
+  .floating-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    color: var(--primary-green);
+  }
+  
+  .floating-card p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+  
+  /* Seções */
+  .agronegocio-section,
+  .receitas-section,
+  .sustentabilidade-section,
+  .tecnologia-section,
+  .cooperativas-section {
+    padding: 120px 0;
+    position: relative;
+  }
+  
+  .agronegocio-section {
+    background: var(--white);
+  }
+  
+  .sustentabilidade-section {
+    background: var(--warm-beige);
+  }
+  
+  .tecnologia-section {
+    background: var(--white);
+  }
+  
+  .cooperativas-section {
+    background: var(--gradient-soft);
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .section-badge {
+    display: inline-block;
+    background: var(--gradient-warm);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1.5rem;
+    color: var(--primary-green);
+  }
+  
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Agronegócio Stats Grid */
+  .agro-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .agro-stat-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: var(--transition);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+  }
+  
+  .agro-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .stat-icon {
+    font-size: 3rem;
+    background: var(--gradient-soft);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--accent-gold);
+  }
+  
+  .stat-content h3 {
+    font-size: 1.25rem;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    font-family: "Playfair Display", serif;
+  }
+  
+  .stat-unit {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-position {
+    background: var(--gradient-warm);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+  }
+  
+  /* Cadeia Produtiva */
+  .cadeia-produtiva {
+    margin-top: 4rem;
+  }
+  
+  .subsection-title {
+    font-size: 2rem;
+    color: var(--primary-green);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .cadeia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .cadeia-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+  }
+  
+  .cadeia-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .cadeia-icon {
+    font-size: 3rem;
+    background: var(--gradient-soft);
+    padding: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 1rem;
+    border: 2px solid var(--accent-gold);
+  }
+  
+  .cadeia-item h4 {
+    font-size: 1.25rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+  
+  .cadeia-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Details/Summary styling */
+  .cadeia-details,
+  .sustent-details,
+  .tech-details,
+  .centro-details,
+  .coop-details {
+    margin-top: 1rem;
+  }
+  
+  .cadeia-details summary,
+  .sustent-details summary,
+  .tech-details summary,
+  .centro-details summary,
+  .coop-details summary {
+    background: var(--gradient-warm);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-align: center;
+    transition: var(--transition);
+    list-style: none;
+    outline: none;
+  }
+  
+  .cadeia-details summary:hover,
+  .sustent-details summary:hover,
+  .tech-details summary:hover,
+  .centro-details summary:hover,
+  .coop-details summary:hover {
+    background: linear-gradient(135deg, #b8941f 0%, #d4af37 100%);
+    transform: translateY(-1px);
+  }
+  
+  .cadeia-details summary::-webkit-details-marker,
+  .sustent-details summary::-webkit-details-marker,
+  .tech-details summary::-webkit-details-marker,
+  .centro-details summary::-webkit-details-marker,
+  .coop-details summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  .cadeia-features,
+  .sustent-features,
+  .centro-features,
+  .coop-features {
+    list-style: none;
+    text-align: left;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--gradient-soft);
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .cadeia-features li,
+  .sustent-features li,
+  .centro-features li,
+  .coop-features li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .cadeia-features li::before,
+  .centro-features li::before,
+  .coop-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-gold);
+    font-weight: bold;
+  }
+  
+  .sustent-features li::before {
+    content: "🌱";
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Receitas Grid */
+  .receitas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  
+  .receita-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-slow);
+    position: relative;
+  }
+  
+  .receita-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+  }
+  
+  .receita-card.featured {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .card-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--gradient-warm);
+    color: var(--white);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .card-image {
+    height: 280px;
+    background: var(--gradient-primary);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .receita-card.featured .card-image {
+    height: 100%;
+  }
+  
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(26, 77, 46, 0.8) 0%, rgba(45, 90, 61, 0.6) 100%);
+    transition: var(--transition);
+  }
+  
+  .receita-card:hover .image-overlay {
+    background: linear-gradient(45deg, rgba(26, 77, 46, 0.6) 0%, rgba(45, 90, 61, 0.4) 100%);
+  }
+  
+  .card-emoji {
+    font-size: 4rem;
+    z-index: 1;
+    position: relative;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  }
+  
+  .card-content {
+    padding: 2rem;
+  }
+  
+  .card-category {
+    color: var(--accent-gold);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+    line-height: 1.3;
+  }
+  
+  .card-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-certifications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cert-badge {
+    background: var(--gradient-soft);
+    color: var(--primary-green);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+  
+  .card-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-light);
+    font-size: 0.875rem;
+  }
+  
+  .meta-item svg {
+    color: var(--accent-gold);
+  }
+  
+  /* Card Actions - Botões para accordion e modal */
+  .card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn-accordion,
+  .btn-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    border: none;
+  }
+  
+  .btn-accordion {
+    background: var(--gradient-soft);
+    color: var(--primary-green);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+  
+  .btn-accordion:hover {
+    background: var(--warm-beige);
+    transform: translateY(-1px);
+  }
+  
+  .btn-modal {
+    background: var(--gradient-primary);
+    color: var(--white);
+  }
+  
+  .btn-modal:hover {
+    background: linear-gradient(135deg, #0f2818 0%, #1a3d2a 100%);
+    transform: translateY(-1px);
+  }
+  
+  /* Recipe Accordion */
+  .recipe-accordion {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--gradient-soft);
+    border-radius: var(--border-radius-sm);
+    margin-top: 1rem;
+  }
+  
+  /* Mostrar accordion quando checkbox estiver marcado */
+  #accordion-churrasco:checked ~ * .receita-card:nth-of-type(1) .recipe-accordion,
+  #accordion-leitao:checked ~ * .receita-card:nth-of-type(2) .recipe-accordion,
+  #accordion-frango:checked ~ * .receita-card:nth-of-type(3) .recipe-accordion,
+  #accordion-queijo:checked ~ * .receita-card:nth-of-type(4) .recipe-accordion,
+  #accordion-pamonha:checked ~ * .receita-card:nth-of-type(5) .recipe-accordion,
+  #accordion-mel:checked ~ * .receita-card:nth-of-type(6) .recipe-accordion,
+  #accordion-soja:checked ~ * .receita-card:nth-of-type(7) .recipe-accordion,
+  #accordion-cafe:checked ~ * .receita-card:nth-of-type(8) .recipe-accordion {
+    max-height: 800px;
+    padding: 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+  
+  /* Rotacionar seta quando accordion estiver aberto */
+  #accordion-churrasco:checked ~ * .receita-card:nth-of-type(1) .btn-accordion svg,
+  #accordion-leitao:checked ~ * .receita-card:nth-of-type(2) .btn-accordion svg,
+  #accordion-frango:checked ~ * .receita-card:nth-of-type(3) .btn-accordion svg,
+  #accordion-queijo:checked ~ * .receita-card:nth-of-type(4) .btn-accordion svg,
+  #accordion-pamonha:checked ~ * .receita-card:nth-of-type(5) .btn-accordion svg,
+  #accordion-mel:checked ~ * .receita-card:nth-of-type(6) .btn-accordion svg,
+  #accordion-soja:checked ~ * .receita-card:nth-of-type(7) .btn-accordion svg,
+  #accordion-cafe:checked ~ * .receita-card:nth-of-type(8) .btn-accordion svg {
+    transform: rotate(180deg);
+  }
+  
+  .accordion-content {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out 0.2s;
+  }
+  
+  #accordion-churrasco:checked ~ * .receita-card:nth-of-type(1) .accordion-content,
+  #accordion-leitao:checked ~ * .receita-card:nth-of-type(2) .accordion-content,
+  #accordion-frango:checked ~ * .receita-card:nth-of-type(3) .accordion-content,
+  #accordion-queijo:checked ~ * .receita-card:nth-of-type(4) .accordion-content,
+  #accordion-pamonha:checked ~ * .receita-card:nth-of-type(5) .accordion-content,
+  #accordion-mel:checked ~ * .receita-card:nth-of-type(6) .accordion-content,
+  #accordion-soja:checked ~ * .receita-card:nth-of-type(7) .accordion-content,
+  #accordion-cafe:checked ~ * .receita-card:nth-of-type(8) .accordion-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Quick Recipe Styling */
+  .quick-recipe {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .quick-section h4 {
+    color: var(--primary-green);
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .quick-list,
+  .quick-steps {
+    margin: 0;
+    padding-left: 1rem;
+  }
+  
+  .quick-list li,
+  .quick-steps li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  
+  .quick-steps {
+    counter-reset: step-counter;
+  }
+  
+  .quick-steps li {
+    counter-increment: step-counter;
+    position: relative;
+    padding-left: 1.5rem;
+    list-style: none;
+  }
+  
+  .quick-steps li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--accent-gold);
+    color: var(--white);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .tip-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-style: italic;
+    background: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius-sm);
+    border-left: 4px solid var(--accent-gold);
+  }
+  
+  .sustainability-quick {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .sustain-item {
+    background: var(--white);
+    color: var(--primary-green);
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 1px solid var(--accent-gold);
+  }
+  
+  .cupping-quick {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .cupping-item {
+    background: var(--white);
+    padding: 0.75rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    border-left: 3px solid var(--accent-gold);
+  }
+  
+  /* Sustentabilidade Grid */
+  .sustentabilidade-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .sustentabilidade-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+  }
+  
+  .sustentabilidade-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .sustent-icon {
+    font-size: 3rem;
+    background: var(--gradient-soft);
+    padding: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 1rem;
+    border: 2px solid var(--accent-gold);
+  }
+  
+  .sustentabilidade-card h3 {
+    font-size: 1.25rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+  
+  .sustentabilidade-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Tecnologia Section */
+  .tecnologia-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .tech-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+  }
+  
+  .tech-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .tech-icon {
+    font-size: 3rem;
+    background: var(--gradient-soft);
+    padding: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 1rem;
+    border: 2px solid var(--accent-gold);
+  }
+  
+  .tech-card h3 {
+    font-size: 1.25rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+  
+  .tech-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tech-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--gradient-soft);
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .tech-stat {
+    text-align: center;
+  }
+  
+  .tech-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    font-family: "Playfair Display", serif;
+  }
+  
+  .tech-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+  }
+  
+  /* Inovação Destaque */
+  .inovacao-destaque {
+    background: var(--gradient-soft);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+  
+  .inovacao-destaque h3 {
+    font-size: 2rem;
+    color: var(--primary-green);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .centros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .centro-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .centro-item h4 {
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+  }
+  
+  .centro-item p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  /* Cooperativas Section */
+  .cooperativas-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .coop-stat {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    transition: var(--transition);
+  }
+  
+  .coop-stat:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .coop-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    font-family: "Playfair Display", serif;
+    margin-bottom: 0.5rem;
+  }
+  
+  .coop-label {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  
+  .cooperativas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .cooperativa-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+  }
+  
+  .cooperativa-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .cooperativa-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+  }
+  
+  .coop-location {
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .coop-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .coop-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .highlight-item {
+    background: var(--gradient-soft);
+    color: var(--primary-green);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+  
+  /* Footer */
+  .footer {
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 4rem 0 0;
+    position: relative;
+  }
+  
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.5) 50%, transparent 100%);
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .footer-brand {
+    max-width: 350px;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-logo h3 {
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+  }
+  
+  .footer-description {
+    line-height: 1.7;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--white);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+  }
+  
+  .social-link:hover {
+    background: var(--accent-gold);
+    transform: translateY(-2px);
+  }
+  
+  .footer-section h4 {
+    color: var(--accent-gold);
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-section a {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: var(--transition);
+  }
+  
+  .footer-section a:hover {
+    opacity: 1;
+    color: var(--accent-gold);
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    opacity: 0.9;
+  }
+  
+  .contact-item svg {
+    color: var(--accent-gold);
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 0;
+  }
+  
+  .footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.7;
+    font-size: 0.875rem;
+    transition: var(--transition);
+  }
+  
+  .footer-links a:hover {
+    opacity: 1;
+    color: var(--accent-gold);
+  }
+  
+  /* Modais das Receitas */
+  .recipe-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    pointer-events: none;
+  }
+  
+  /* Mostrar modal quando checkbox estiver marcado */
+  #modal-churrasco:checked ~ #churrasco-modal,
+  #modal-leitao:checked ~ #leitao-modal,
+  #modal-frango:checked ~ #frango-modal,
+  #modal-queijo:checked ~ #queijo-modal,
+  #modal-pamonha:checked ~ #pamonha-modal,
+  #modal-mel:checked ~ #mel-modal,
+  #modal-soja:checked ~ #soja-modal,
+  #modal-cafe:checked ~ #cafe-modal {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  
+  #modal-churrasco:checked ~ #churrasco-modal .modal-container,
+  #modal-leitao:checked ~ #leitao-modal .modal-container,
+  #modal-frango:checked ~ #frango-modal .modal-container,
+  #modal-queijo:checked ~ #queijo-modal .modal-container,
+  #modal-pamonha:checked ~ #pamonha-modal .modal-container,
+  #modal-mel:checked ~ #mel-modal .modal-container,
+  #modal-soja:checked ~ #soja-modal .modal-container,
+  #modal-cafe:checked ~ #cafe-modal .modal-container {
+    transform: scale(1) translateY(0);
+  }
+  
+  .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+  }
+  
+  .modal-close-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .modal-container {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    margin: 5vh auto;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    transform: scale(0.9) translateY(50px);
+    transition: var(--transition-slow);
+  }
+  
+  .modal-header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+  }
+  
+  .modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .modal-close:hover {
+    background: var(--white);
+    transform: scale(1.1);
+  }
+  
+  .modal-content {
+    max-height: calc(90vh - 60px);
+    overflow-y: auto;
+    padding: 0;
+  }
+  
+  /* Scrollbar personalizada */
+  .modal-content::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .modal-content::-webkit-scrollbar-track {
+    background: var(--warm-beige);
+  }
+  
+  .modal-content::-webkit-scrollbar-thumb {
+    background: var(--accent-gold);
+    border-radius: 4px;
+  }
+  
+  .modal-content::-webkit-scrollbar-thumb:hover {
+    background: #b8941f;
+  }
+  
+  /* Header da Receita */
+  .recipe-header {
+    background: var(--gradient-primary);
+    color: var(--white);
+    padding: 3rem 2rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .recipe-emoji {
+    font-size: 4rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .recipe-info {
+    flex: 1;
+  }
+  
+  .recipe-category {
+    display: inline-block;
+    background: var(--accent-gold);
+    color: var(--text-primary);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .recipe-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .recipe-certifications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .recipe-certifications .cert-badge {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .recipe-meta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .recipe-meta .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 8px 16px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .recipe-meta .meta-item svg {
+    color: var(--accent-gold);
+  }
+  
+  /* Conteúdo da Receita */
+  .recipe-content {
+    padding: 2rem;
+  }
+  
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--warm-beige);
+  }
+  
+  .section-title svg {
+    color: var(--accent-gold);
+  }
+  
+  /* Seção de Rastreabilidade */
+  .rastreabilidade-section {
+    margin-bottom: 3rem;
+    background: var(--gradient-soft);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+  
+  .rastreabilidade-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+  
+  .trace-item {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .trace-item strong {
+    color: var(--primary-green);
+  }
+  
+  /* Seção de Ingredientes */
+  .ingredients-section {
+    margin-bottom: 3rem;
+  }
+  
+  .ingredients-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .ingredient-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background: var(--warm-beige);
+    border-radius: var(--border-radius-sm);
+    border-left: 4px solid var(--accent-gold);
+    transition: var(--transition);
+  }
+  
+  .ingredient-item:hover {
+    background: #f0ead6;
+    transform: translateX(4px);
+  }
+  
+  .ingredient-item::before {
+    content: "🥄";
+    margin-right: 12px;
+    font-size: 1.1rem;
+  }
+  
+  /* Seção de Preparo */
+  .preparation-section {
+    margin-bottom: 3rem;
+  }
+  
+  .preparation-list {
+    list-style: none;
+    counter-reset: step-counter;
+  }
+  
+  .step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    transition: var(--transition);
+  }
+  
+  .step-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  
+  .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--gradient-warm);
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+    counter-increment: step-counter;
+  }
+  
+  .step-number::before {
+    content: counter(step-counter);
+  }
+  
+  .step-text {
+    line-height: 1.6;
+    color: var(--text-primary);
+  }
+  
+  /* Seção de Dicas */
+  .tips-section {
+    background: var(--gradient-soft);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    margin-bottom: 3rem;
+  }
+  
+  .tips-list {
+    list-style: none;
+  }
+  
+  .tip-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+    line-height: 1.6;
+    transition: var(--transition);
+  }
+  
+  .tip-item:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .tip-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Seção de Sustentabilidade */
+  .sustainability-section {
+    background: var(--gradient-soft);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    margin-bottom: 3rem;
+  }
+  
+  .sustainability-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .metric-item {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius-sm);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .metric-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .metric-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    font-family: "Playfair Display", serif;
+    margin-bottom: 0.25rem;
+  }
+  
+  .metric-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 1024px) {
+    .receitas-grid {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+  
+    .receita-card.featured {
+      grid-column: span 1;
+      display: block;
+    }
+  
+    .agro-stats-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  
+    .cadeia-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  
+    .tech-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  
+    .cooperativas-stats {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+  
+    .cooperativas-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 80px;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(20px);
+      width: 100%;
+      text-align: center;
+      transition: var(--transition);
+      box-shadow: var(--shadow-lg);
+      padding: 2rem 0;
+      gap: 1.5rem;
+    }
+  
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 4rem 0;
+      min-height: 90vh;
+    }
+  
+    .hero-visual {
+      margin-top: 3rem;
+      height: 300px;
+    }
+  
+    .floating-card {
+      position: relative;
+      margin: 1rem;
+      animation: none;
+    }
+  
+    .floating-card:nth-child(1),
+    .floating-card-2,
+    .floating-card-3 {
+      position: relative;
+      top: auto;
+      right: auto;
+      display: inline-block;
+      margin: 0.5rem;
+    }
+  
+    .hero-stats {
+      justify-content: center;
+    }
+  
+    .receitas-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .agro-stats-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .cadeia-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .sustentabilidade-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .tech-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .cooperativas-stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .cooperativas-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2rem;
+    }
+  
+    .footer-bottom-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-buttons {
+      justify-content: center;
+    }
+  
+    .card-actions {
+      flex-direction: column;
+    }
+  
+    /* Modal responsivo */
+    .modal-container {
+      width: 95%;
+      margin: 2.5vh auto;
+      max-height: 95vh;
+    }
+  
+    .recipe-header {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem 1.5rem;
+    }
+  
+    .recipe-emoji {
+      font-size: 3rem;
+      padding: 0.75rem;
+    }
+  
+    .recipe-title {
+      font-size: 2rem;
+    }
+  
+    .recipe-meta {
+      justify-content: center;
+      gap: 1rem;
+    }
+  
+    .recipe-content {
+      padding: 1.5rem;
+    }
+  
+    .ingredients-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .step-item {
+      padding: 1rem;
+    }
+  
+    .rastreabilidade-info {
+      grid-template-columns: 1fr;
+    }
+  
+    .sustainability-metrics {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 0 16px;
+    }
+  
+    .hero-content {
+      padding: 0 16px;
+    }
+  
+    .agronegocio-section,
+    .receitas-section,
+    .sustentabilidade-section,
+    .tecnologia-section,
+    .cooperativas-section {
+      padding: 80px 0;
+    }
+  
+    .cooperativas-stats {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .modal-container {
+      width: 98%;
+      margin: 1vh auto;
+      max-height: 98vh;
+      border-radius: var(--border-radius-sm);
+    }
+  
+    .recipe-header {
+      padding: 1.5rem 1rem;
+    }
+  
+    .recipe-title {
+      font-size: 1.75rem;
+    }
+  
+    .recipe-content {
+      padding: 1rem;
+    }
+  
+    .section-title {
+      font-size: 1.25rem;
+    }
+  
+    .tips-section,
+    .sustainability-section {
+      padding: 1.5rem;
+    }
+  
+    .sustainability-metrics {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero-stats {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .stat-item {
+      min-width: 200px;
+    }
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Estados de foco para acessibilidade */
+  .nav-link:focus,
+  .btn-primary:focus,
+  .btn-secondary:focus,
+  .btn-accordion:focus,
+  .btn-modal:focus,
+  .modal-close:focus {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+    border-radius: var(--border-radius-sm);
+  }
+  
+  /* Estados ativos */
+  .nav-link:active,
+  .btn-primary:active,
+  .btn-secondary:active,
+  .btn-accordion:active,
+  .btn-modal:active {
+    transform: scale(0.98);
+  }
+  
+  /* Micro-interações */
+  .receita-card:hover .card-emoji {
+    transform: scale(1.1) rotate(5deg);
+    transition: var(--transition);
+  }
+  
+  .agro-stat-card:hover .stat-icon {
+    transform: scale(1.1);
+    transition: var(--transition);
+  }
+  
+  .tech-card:hover .tech-icon {
+    transform: scale(1.1) rotate(5deg);
+    transition: var(--transition);
+  }
+  
+  /* Print styles */
+  @media print {
+    .header,
+    .footer,
+    .hero-visual,
+    .floating-card,
+    .recipe-modal {
+      display: none;
+    }
+  
+    .hero {
+      margin-top: 0;
+      min-height: auto;
+      padding: 2rem 0;
+    }
+  
+    .receitas-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .recipe-accordion {
+      max-height: none !important;
+      padding: 1rem !important;
+    }
+  
+    .accordion-content {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+  

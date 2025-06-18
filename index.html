@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroParaná  - Excelência do Campo à Mesa</title>
+<link rel="icon" type="image/png" href="Imagem/logo 2.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grain-overlay"></div>
+
+<!-- Checkboxes ocultos para controlar modais e accordions -->
+<input type="checkbox" id="modal-churrasco" class="modal-toggle">
+<input type="checkbox" id="modal-leitao" class="modal-toggle">
+<input type="checkbox" id="modal-frango" class="modal-toggle">
+<input type="checkbox" id="modal-queijo" class="modal-toggle">
+<input type="checkbox" id="modal-pamonha" class="modal-toggle">
+<input type="checkbox" id="modal-mel" class="modal-toggle">
+<input type="checkbox" id="modal-soja" class="modal-toggle">
+<input type="checkbox" id="modal-cafe" class="modal-toggle">
+
+<!-- Checkboxes para accordions das receitas -->
+<input type="checkbox" id="accordion-churrasco" class="accordion-toggle">
+<input type="checkbox" id="accordion-leitao" class="accordion-toggle">
+<input type="checkbox" id="accordion-frango" class="accordion-toggle">
+<input type="checkbox" id="accordion-queijo" class="accordion-toggle">
+<input type="checkbox" id="accordion-pamonha" class="accordion-toggle">
+<input type="checkbox" id="accordion-mel" class="accordion-toggle">
+<input type="checkbox" id="accordion-soja" class="accordion-toggle">
+<input type="checkbox" id="accordion-cafe" class="accordion-toggle">
+
+<!-- Checkbox para menu mobile -->
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+<header class="header">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                    <img class="logo" src="Imagem/logo 2.png" alt="Imagem de carne">
+                <h1>Campo na cidade</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#agronegocio" class="nav-link">Agronegócio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#receitas" class="nav-link">Receitas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sustentabilidade" class="nav-link">Sustentabilidade</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#tecnologia" class="nav-link">Inovação</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cooperativas" class="nav-link">Cooperativas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contato" class="nav-link">Contato</a>
+                </li>
+            </ul>
+            <label for="menu-toggle" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-pattern"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>🏆 Líder Nacional em Agronegócio</span>
+            </div>
+            <h1 class="hero-title">
+                Do Campo à Mesa
+                <span class="hero-highlight">Excelência Agropecuária Paranaense</span>
+            </h1>
+            <p class="hero-subtitle">
+                Descubra como o Paraná se tornou referência mundial em agronegócio sustentável, 
+                combinando tradição centenária, tecnologia de ponta e práticas responsáveis 
+                para alimentar o mundo com qualidade premium.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">2º</span>
+                    <span class="stat-label">Maior PIB Agro do Brasil</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">R$ 89bi</span>
+                    <span class="stat-label">Valor Bruto da Produção</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5M</span>
+                    <span class="stat-label">Hectares Cultivados</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#agronegocio" class="btn-primary">
+                    <span>Explorar Agronegócio</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                </a>
+                <a href="#receitas" class="btn-secondary">Receitas</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card">
+                <div class="card-icon">🚜</div>
+                <h3>Agricultura 4.0</h3>
+                <p>Tecnologia Avançada</p>
+            </div>
+            <div class="floating-card floating-card-2">
+                <div class="card-icon">🌱</div>
+                <h3>Sustentável</h3>
+                <p>Práticas Responsáveis</p>
+            </div>
+            <div class="floating-card floating-card-3">
+                <div class="card-icon">🏆</div>
+                <h3>Certificado</h3>
+                <p>Qualidade Mundial</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="agronegocio" class="agronegocio-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Agronegócio Paranaense</span>
+                <h2 class="section-title">Potência Agrícola Nacional</h2>
+                <p class="section-subtitle">
+                    O Paraná é responsável por 15% da produção agrícola brasileira, sendo líder 
+                    em diversas culturas e referência em tecnologia, sustentabilidade e qualidade.
+                </p>
+            </div>
+            
+            <div class="agro-stats-grid">
+                <div class="agro-stat-card">
+                    <div class="stat-icon">🌽</div>
+                    <div class="stat-content">
+                        <h3>Milho</h3>
+                        <div class="stat-number">15.2M</div>
+                        <div class="stat-unit">toneladas/ano</div>
+                        <div class="stat-position">#2 Nacional</div>
+                    </div>
+                </div>
+                
+                <div class="agro-stat-card">
+                    <div class="stat-icon">🫘</div>
+                    <div class="stat-content">
+                        <h3>Soja</h3>
+                        <div class="stat-number">20.8M</div>
+                        <div class="stat-unit">toneladas/ano</div>
+                        <div class="stat-position">#2 Nacional</div>
+                    </div>
+                </div>
+                
+                <div class="agro-stat-card">
+                    <div class="stat-icon">🐔</div>
+                    <div class="stat-content">
+                        <h3>Frango</h3>
+                        <div class="stat-number">4.5M</div>
+                        <div class="stat-unit">toneladas/ano</div>
+                        <div class="stat-position">#1 Nacional</div>
+                    </div>
+                </div>
+                
+                <div class="agro-stat-card">
+                    <div class="stat-icon">🐷</div>
+                    <div class="stat-content">
+                        <h3>Suínos</h3>
+                        <div class="stat-number">1.2M</div>
+                        <div class="stat-unit">toneladas/ano</div>
+                        <div class="stat-position">#2 Nacional</div>
+                    </div>
+                </div>
+                
+                <div class="agro-stat-card">
+                    <div class="stat-icon">☕</div>
+                    <div class="stat-content">
+                        <h3>Café</h3>
+                        <div class="stat-number">2.8M</div>
+                        <div class="stat-unit">sacas/ano</div>
+                        <div class="stat-position">#3 Nacional</div>
+                    </div>
+                </div>
+                
+                <div class="agro-stat-card">
+                    <div class="stat-icon">🥛</div>
+                    <div class="stat-content">
+                        <h3>Leite</h3>
+                        <div class="stat-number">4.8B</div>
+                        <div class="stat-unit">litros/ano</div>
+                        <div class="stat-position">#3 Nacional</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cadeia-produtiva">
+                <h3 class="subsection-title">Cadeia Produtiva Integrada</h3>
+                <div class="cadeia-grid">
+                    <div class="cadeia-item">
+                        <div class="cadeia-icon">🌱</div>
+                        <h4>Produção Primária</h4>
+                        <p>Cultivo com tecnologia de precisão, sementes geneticamente melhoradas e práticas sustentáveis</p>
+                        <details class="cadeia-details">
+                            <summary>Ver Detalhes</summary>
+                            <ul class="cadeia-features">
+                                <li>GPS e drones para monitoramento</li>
+                                <li>Análise de solo computadorizada</li>
+                                <li>Irrigação inteligente</li>
+                                <li>Sementes híbridas de alta performance</li>
+                                <li>Controle biológico de pragas</li>
+                            </ul>
+                        </details>
+                    </div>
+                    
+                    <div class="cadeia-item">
+                        <div class="cadeia-icon">🏭</div>
+                        <h4>Processamento</h4>
+                        <p>Indústrias de transformação com certificação internacional e controle de qualidade rigoroso</p>
+                        <details class="cadeia-details">
+                            <summary>Ver Detalhes</summary>
+                            <ul class="cadeia-features">
+                                <li>Certificação ISO 22000</li>
+                                <li>Rastreabilidade completa</li>
+                                <li>Controle sanitário avançado</li>
+                                <li>Tecnologia de conservação</li>
+                                <li>Agregação de valor</li>
+                            </ul>
+                        </details>
+                    </div>
+                    
+                    <div class="cadeia-item">
+                        <div class="cadeia-icon">🚛</div>
+                        <h4>Logística</h4>
+                        <p>Sistema logístico eficiente conectando produtores aos mercados nacional e internacional</p>
+                        <details class="cadeia-details">
+                            <summary>Ver Detalhes</summary>
+                            <ul class="cadeia-features">
+                                <li>Portos de Paranaguá e Antonina</li>
+                                <li>Malha rodoviária estratégica</li>
+                                <li>Armazéns climatizados</li>
+                                <li>Sistemas de rastreamento</li>
+                                <li>Logística reversa</li>
+                            </ul>
+                        </details>
+                    </div>
+                    
+                    <div class="cadeia-item">
+                        <div class="cadeia-icon">🌍</div>
+                        <h4>Exportação</h4>
+                        <p>Produtos paranaenses chegam a mais de 150 países, gerando divisas e fortalecendo a economia</p>
+                        <details class="cadeia-details">
+                            <summary>Ver Detalhes</summary>
+                            <ul class="cadeia-features">
+                                <li>US$ 12 bilhões em exportações</li>
+                                <li>150+ países atendidos</li>
+                                <li>Certificações internacionais</li>
+                                <li>Acordos comerciais</li>
+                                <li>Marca Paraná no exterior</li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="receitas" class="receitas-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Culinária</span>
+                <h2 class="section-title">Receitas que Contam a História do Agro</h2>
+                <p class="section-subtitle">
+                    Cada prato é uma celebração da excelência agropecuária paranaense, 
+                    preparado com ingredientes rastreáveis, certificados e de qualidade premium.
+                </p>
+            </div>
+            
+            <div class="receitas-grid">
+                <!-- Receita 1: Churrasco Angus -->
+                <article class="receita-card featured" id="receita-churrasco">
+                    <div class="card-badge">Certificado Orgânico</div>
+                    <div class="card-image">
+                        <div class="image-overlay"></div>
+                        <img class="card-emoji" src="Imagem/RH1 - Churrasco.png" alt="Imagem de carne">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">Proteína Bovina Premium</div>
+                        <h3 class="card-title">Churrasco Angus Paranaense</h3>
+                        <p class="card-description">
+                            Carne bovina Angus criada em sistema de pastejo rotacionado, 
+                            com certificação de bem-estar animal e rastreabilidade completa.
+                        </p>
+                        <div class="card-certifications">
+                            <span class="cert-badge">🏆 Certificado BPA</span>
+                            <span class="cert-badge">🌱 Carbono Neutro</span>
+                        </div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>3h</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <span>Avançado</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                </svg>
+                                <span>8-10 pessoas</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Botões de ação -->
+                        <div class="card-actions">
+                            <label for="accordion-churrasco" class="btn-accordion">
+                                <span>Ver Receita Rápida</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6,9 12,15 18,9"/>
+                                </svg>
+                            </label>
+                            <label for="modal-churrasco" class="btn-modal">
+                                <span>Receita Completa</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19"/>
+                                </svg>
+                            </label>
+                        </div>
+
+                        <!-- Accordion com receita resumida -->
+                        <div class="recipe-accordion">
+                            <div class="accordion-content">
+                                <div class="quick-recipe">
+                                    <div class="quick-section">
+                                        <h4>🥄 Ingredientes Principais</h4>
+                                        <ul class="quick-list">
+                                            <li>3kg de picanha Angus certificada</li>
+                                            <li>1,5kg de costela bovina maturada</li>
+                                            <li>300g de sal grosso marinho</li>
+                                            <li>Ervas finas (alecrim, tomilho)</li>
+                                            <li>Carvão vegetal certificado FSC</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="quick-section">
+                                        <h4>👨‍🍳 Preparo Resumido</h4>
+                                        <ol class="quick-steps">
+                                            <li>Retire a carne da geladeira 2h antes</li>
+                                            <li>Tempere com sal grosso 40min antes</li>
+                                            <li>Prepare brasas uniformes sem chamas</li>
+                                            <li>Asse costela primeiro (1h), depois picanha</li>
+                                            <li>Vire a cada 20min, controle temperatura</li>
+                                            <li>Deixe descansar 15min antes de servir</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="quick-section">
+                                        <h4>🌱 Sustentabilidade</h4>
+                                        <div class="sustainability-quick">
+                                            <span class="sustain-item">-40% CO₂</span>
+                                            <span class="sustain-item">-30% Água</span>
+                                            <span class="sustain-item">+25% Biodiversidade</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Receita 2: Leitão -->
+                <article class="receita-card" id="receita-leitao">
+                    <div class="card-badge">Integração Lavoura-Pecuária</div>
+                    <div class="card-image">
+                        <div class="image-overlay"></div>
+                        <img class="card-image" src="Imagem/R5 - Leitão à pururuca.png" alt="Imagem de carne">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">Suinocultura Sustentável</div>
+                        <h3 class="card-title">Leitão à Pururuca</h3>
+                        <p class="card-description">
+                            Suíno criado em sistema de bem-estar animal, alimentado com ração 
+                            produzida na própria propriedade com milho e soja não-transgênicos.
+                        </p>
+                        <div class="card-certifications">
+                            <span class="cert-badge">🐷 Bem-Estar Animal</span>
+                            <span class="cert-badge">🌾 Livre de Transgênicos</span>
+                        </div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>5h</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <span>Avançado</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <label for="accordion-leitao" class="btn-accordion">
+                                <span>Ver Receita Rápida</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6,9 12,15 18,9"/>
+                                </svg>
+                            </label>
+                            <label for="modal-leitao" class="btn-modal">
+                                <span>Receita Completa</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19"/>
+                                </svg>
+                            </label>
+                        </div>
+
+                        <div class="recipe-accordion">
+                            <div class="accordion-content">
+                                <div class="quick-recipe">
+                                    <div class="quick-section">
+                                        <h4>🥄 Ingredientes Principais</h4>
+                                        <ul class="quick-list">
+                                            <li>1 leitão de 8-10kg limpo</li>
+                                            <li>200g de sal grosso</li>
+                                            <li>100g de alho descascado</li>
+                                            <li>Páprica doce e cominho</li>
+                                            <li>500ml de vinho branco seco</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="quick-section">
+                                        <h4>👨‍🍳 Preparo Resumido</h4>
+                                        <ol class="quick-steps">
+                                            <li>Faça cortes em losango na pele</li>
+                                            <li>Prepare pasta com alho e temperos</li>
+                                            <li>Marine por 2h, amarre com barbante</li>
+                                            <li>Asse a 180°C por 3h regando sempre</li>
+                                            <li>Aumente para 220°C nos últimos 30min</li>
+                                            <li>Pururuca deve ficar dourada e crocante</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="quick-section">
+                                        <h4>💡 Dica Especial</h4>
+                                        <p class="tip-text">O segredo da pururuca está nos cortes na pele e alta temperatura final. Use termômetro para controle preciso.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Receita 3: Frango Caipira -->
+                <article class="receita-card" id="receita-frango">
+                    <div class="card-badge">Avicultura Integrada</div>
+                    <div class="card-image">
+                        <div class="image-overlay"></div>
+                        <img class="card-image" src="Imagem/R6 - Frango com polenta.png" alt="Imagem de carne">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">Avicultura de Precisão</div>
+                        <h3 class="card-title">Frango Caipira com Polenta Orgânica</h3>
+                        <p class="card-description">
+                            Frango criado em sistema semi-intensivo com acesso a pasto, 
+                            acompanhado de polenta feita com milho orgânico certificado.
+                        </p>
+                        <div class="card-certifications">
+                            <span class="cert-badge">🌱 Orgânico Certificado</span>
+                            <span class="cert-badge">🐔 Criação Livre</span>
+                        </div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>2h</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <span>Médio</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <label for="accordion-frango" class="btn-accordion">
+                                <span>Ver Receita Rápida</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6,9 12,15 18,9"/>
+                                </svg>
+                            </label>
+                            <label for="modal-frango" class="btn-modal">
+                                <span>Receita Completa</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19"/>
+                                </svg>
+                            </label>
+                        </div>
+
+                        <div class="recipe-accordion">
+                            <div class="accordion-content">
+                                <div class="quick-recipe">
+                                    <div class="quick-section">
+                                        <h4>🥄 Ingredientes Principais</h4>
+                                        <ul class="quick-list">
+                                            <li>1 frango caipira de 2kg cortado</li>
+                                            <li>2 xícaras de fubá para polenta</li>
+                                            <li>200g de queijo colonial ralado</li>
+                                            <li>Temperos frescos da horta</li>
+                                            <li>1 xícara de vinho branco</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="quick-section">
+                                        <h4>👨‍🍳 Preparo Resumido</h4>
+                                        <ol class="quick-steps">
+                                            <li>Tempere o frango e marine 30min</li>
+                                            <li>Doure o frango em panela grande</li>
+                                            <li>Refogue legumes, adicione vinho</li>
+                                            <li>Cozinhe em fogo baixo por 40min</li>
+                                            <li>Prepare polenta cremosa com queijo</li>
+                                            <li>Sirva o frango sobre a polenta</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="quick-section">
+                                        <h4>🌱 Benefícios</h4>
+                                        <p class="tip-text">Frango caipira tem 30% mais proteína e sabor mais intenso. Polenta orgânica é rica em fibras e energia.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Receita 4: Queijo Colonial -->
+                <article class="receita-card" id="receita-queijo">
+                    <div class="card-badge">Laticínios Premium</div>
+                    <div class="card-image">
+                        <div class="image-overlay"></div>
+                        <img class="card-image" src="Imagem/R7 - Queijo colonial defumado.png" alt="Imagem de carne">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">Pecuária Leiteira Sustentável</div>
+                        <h3 class="card-title">Queijo Colonial Defumado</h3>
+                        <p class="card-description">
+                            Queijo artesanal produzido com leite A2A2 de vacas Jersey, 
+                            defumado com madeira de araucária em processo controlado.
+                        </p>
+                        <div class="card-certifications">
+                            <span class="cert-badge">🥛 Leite A2A2</span>
+                            <span class="cert-badge">🌲 Madeira Sustentável</span>
+                        </div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>48h</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <span>Avançado</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <label for="accordion-queijo" class="btn-accordion">
+                                <span>Ver Receita Rápida</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6,9 12,15 18,9"/>
+                                </svg>
+                            </label>
+                            <label for="modal-queijo" class="btn-modal">
+                                <span>Receita Completa</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19"/>
+                                </svg>
+                            </label>
+                        </div>
+
+                        <div class="recipe-accordion">
+                            <div class="accordion-content">
+                                <div class="quick-recipe">
+                                    <div class="quick-section">
+                                        <h4>🥄 Ingredientes Principais</h4>
+                                        <ul class="quick-list">
+                                            <li>4 litros de leite A2A2 fresco</li>
+                                            <li>1/4 xícara de vinagre branco</li>
+                                            <li>1 colher de chá de sal</li>
+                                            <li>Ervas finas da propriedade</li>
+                                            <li>Madeira de araucária para defumar</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="quick-section">
+                                        <h4>👨‍🍳 Preparo Resumido</h4>
+                                        <ol class="quick-steps">
+                                            <li>Aqueça leite até 85°C</li>
+                                            <li>Adicione vinagre para formar coalho</li>
+                                            <li>Coe e tempere o coalho</li>
+                                            <li>Prense por 12h na geladeira</li>
+                                            <li>Defume com araucária por 2-3h</li>
+                                            <li>Cure por 24h antes de consumir</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="quick-section">
+                                        <h4>🌲 Tradição</h4>
+                                        <p class="tip-text">Madeira de araucária dá sabor característico do Paraná. Leite A2A2 é mais digestível e saboroso.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Receita 5: Pamonha -->
+                <article class="receita-card" id="receita-pamonha">
+                    <div class="card-badge">Agricultura Familiar</div>
+                    <div class="card-image">
+                        <div class="image-overlay"></div>
+                        <img class="card-image" src="Imagem/R8 - Pamonha.png" alt="Imagem de carne">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">Milho Especial</div>
+                        <h3 class="card-title">Pamonha de Milho Doce Híbrido</h3>
+                        <p class="card-description">
+                            Pamonha preparada com milho doce híbrido desenvolvido pela 
+                            pesquisa paranaense, com maior teor de açúcar natural.
+                        </p>
+                        <div class="card-certifications">
+                            <span class="cert-badge">🧬 Híbrido Melhorado</span>
+                            <span class="cert-badge">👨‍🌾 Agricultura Familiar</span>
+                        </div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>1h 30min</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <span>Fácil</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <label for="accordion-pamonha" class="btn-accordion">
+                                <span>Ver Receita Rápida</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6,9 12,15 18,9"/>
+                                </svg>
+                            </label>
+                            <label for="modal-pamonha" class="btn-modal">
+                                <span>Receita Completa</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19"/>
+                                </svg>
+                            </label>
+                        </div>
+
+                        <div class="recipe-accordion">
+                            <div class="accordion-content">
+                                <div class="quick-recipe">
+                                    <div class="quick-section">
+                                        <h4>🥄 Ingredientes Principais</h4>
+                                        <ul class="quick-list">
+                                            <li>12 espigas de milho doce híbrido</li>
+                                            <li>1 xícara de leite integral</li>
+                                            <li>1/2 xícara de açúcar mascavo</li>
+                                            <li>Erva-doce e baunilha</li>
+                                            <li>Palha do próprio milho</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="quick-section">
+                                        <h4>👨‍🍳 Preparo Resumido</h4>
+                                        <ol class="quick-steps">
+                                            <li>Retire palhas com cuidado</li>
+                                            <li>Rale milho ou bata no liquidificador</li>
+                                            <li>Peneire para retirar bagaços</li>
+                                            <li>Cozinhe massa com temperos 10min</li>
+                                            <li>Embale nas palhas e amarre</li>
+                                            <li>Cozinhe em água fervente 40min</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="quick-section">
+                                        <h4>🧬 Inovação</h4>
+                                        <p class="tip-text">Milho híbrido tem 40% mais açúcar natural e melhor textura. Desenvolvido especialmente para pamonhas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Receita 6: Mel com Pinhão -->
+                <article class="receita-card" id="receita-mel">
+                    <div class="card-badge">Apicultura Sustentável</div>
+                    <div class="card-image">
+                        <div class="image-overlay"></div>
+                        <img class="card-image" src="Imagem/R9 - Pinhão com mel.png" alt="Imagem de carne">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">Produtos da Colmeia</div>
+                        <h3 class="card-title">Mel Silvestre com Pinhão</h3>
+                        <p class="card-description">
+                            Mel multifloral de abelhas Apis mellifera criadas em sistema 
+                            agroflorestal, acompanhado de pinhão da Floresta de Araucárias.
+                        </p>
+                        <div class="card-certifications">
+                            <span class="cert-badge">🐝 Apicultura Sustentável</span>
+                            <span class="cert-badge">🌲 Floresta Nativa</span>
+                        </div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>45min</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <span>Fácil</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <label for="accordion-mel" class="btn-accordion">
+                                <span>Ver Receita Rápida</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6,9 12,15 18,9"/>
+                                </svg>
+                            </label>
+                            <label for="modal-mel" class="btn-modal">
+                                <span>Receita Completa</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19"/>
+                                </svg>
+                            </label>
+                        </div>
+
+                        <div class="recipe-accordion">
+                            <div class="accordion-content">
+                                <div class="quick-recipe">
+                                    <div class="quick-section">
+                                        <h4>🥄 Ingredientes Principais</h4>
+                                        <ul class="quick-list">
+                                            <li>2 xícaras de pinhão descascado</li>
+                                            <li>1/2 xícara de mel silvestre puro</li>
+                                            <li>1 colher de sopa de manteiga</li>
+                                            <li>Canela em pó e baunilha</li>
+                                            <li>Castanhas para decorar</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="quick-section">
+                                        <h4>👨‍🍳 Preparo Resumido</h4>
+                                        <ol class="quick-steps">
+                                            <li>Cozinhe pinhão em água com sal 20min</li>
+                                            <li>Retire película marrom dos pinhões</li>
+                                            <li>Doure pinhão na manteiga</li>
+                                            <li>Adicione mel e temperos</li>
+                                            <li>Cozinhe 5min até caramelizar</li>
+                                            <li>Sirva quente em taças individuais</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="quick-section">
+                                        <h4>🌲 Tradição</h4>
+                                        <p class="tip-text">Pinhão é símbolo do Paraná. Mel silvestre tem propriedades medicinais e sabor único da flora nativa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Receita 7: Tempeh de Soja -->
+                <article class="receita-card" id="receita-soja">
+                    <div class="card-badge">Proteína Vegetal</div>
+                    <div class="card-image">
+                        <div class="image-overlay"></div>
+                        <img class="card-image" src="Imagem/20250618_1817_image.png" alt="Imagem de carne">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">Soja Premium</div>
+                        <h3 class="card-title">Tempeh de Soja Especial</h3>
+                        <p class="card-description">
+                            Tempeh artesanal feito com soja especial para alimentação humana, 
+                            cultivada com tecnologia de precisão e livre de agrotóxicos.
+                        </p>
+                        <div class="card-certifications">
+                            <span class="cert-badge">🌱 Livre de Agrotóxicos</span>
+                            <span class="cert-badge">🧬 Soja Especial</span>
+                        </div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>72h</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <span>Médio</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <label for="accordion-soja" class="btn-accordion">
+                                <span>Ver Receita Rápida</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6,9 12,15 18,9"/>
+                                </svg>
+                            </label>
+                            <label for="modal-soja" class="btn-modal">
+                                <span>Receita Completa</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19"/>
+                                </svg>
+                            </label>
+                        </div>
+
+                        <div class="recipe-accordion">
+                            <div class="accordion-content">
+                                <div class="quick-recipe">
+                                    <div class="quick-section">
+                                        <h4>🥄 Ingredientes Principais</h4>
+                                        <ul class="quick-list">
+                                            <li>500g de soja especial BRS 284</li>
+                                            <li>2 colheres de vinagre de arroz</li>
+                                            <li>1 pacote de starter de tempeh</li>
+                                            <li>Água filtrada para hidratação</li>
+                                            <li>Folhas de bananeira</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="quick-section">
+                                        <h4>👨‍🍳 Preparo Resumido</h4>
+                                        <ol class="quick-steps">
+                                            <li>Deixe soja de molho 12-24h</li>
+                                            <li>Descasque grãos manualmente</li>
+                                            <li>Cozinhe 45min até ficar macia</li>
+                                            <li>Misture starter e vinagre</li>
+                                            <li>Embale e incube a 30-32°C</li>
+                                            <li>Fermente 24-48h até formar micélio</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="quick-section">
+                                        <h4>🧬 Ciência</h4>
+                                        <p class="tip-text">Soja BRS 284 tem 42% de proteína. Fermentação aumenta digestibilidade e cria sabor umami único.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Receita 8: Café Gourmet -->
+                <article class="receita-card" id="receita-cafe">
+                    <div class="card-badge">Café Especial</div>
+                    <div class="card-image">
+                        <div class="image-overlay"></div>
+                        <img class="card-image" src="Imagem/20250618_1818_image.png" alt="Imagem de carne">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">Cafés do Norte Pioneiro</div>
+                        <h3 class="card-title">Café Gourmet com Doce de Leite</h3>
+                        <p class="card-description">
+                            Café especial do Norte Pioneiro com pontuação acima de 80 pontos, 
+                            acompanhado de doce de leite artesanal de búfala.
+                        </p>
+                        <div class="card-certifications">
+                            <span class="cert-badge">☕ 85+ Pontos SCA</span>
+                            <span class="cert-badge">🐃 Leite de Búfala</span>
+                        </div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>2h</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <span>Médio</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <label for="accordion-cafe" class="btn-accordion">
+                                <span>Ver Receita Rápida</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6,9 12,15 18,9"/>
+                                </svg>
+                            </label>
+                            <label for="modal-cafe" class="btn-modal">
+                                <span>Receita Completa</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19"/>
+                                </svg>
+                            </label>
+                        </div>
+
+                        <div class="recipe-accordion">
+                            <div class="accordion-content">
+                                <div class="quick-recipe">
+                                    <div class="quick-section">
+                                        <h4>🥄 Ingredientes Principais</h4>
+                                        <ul class="quick-list">
+                                            <li>30g de café especial moído na hora</li>
+                                            <li>500ml de água mineral (TDS 150-300)</li>
+                                            <li>1 litro de leite de búfala</li>
+                                            <li>200g de açúcar cristal orgânico</li>
+                                            <li>1 fava de baunilha</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="quick-section">
+                                        <h4>👨‍🍳 Preparo Resumido</h4>
+                                        <ol class="quick-steps">
+                                            <li>Aqueça água até 92-96°C</li>
+                                            <li>Moa café em granulometria média-fina</li>
+                                            <li>Faça extração por V60 em 4min</li>
+                                            <li>Cozinhe leite com açúcar e baunilha</li>
+                                            <li>Mexa constantemente por 1h30</li>
+                                            <li>Sirva café quente com doce morno</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="quick-section">
+                                        <h4>☕ Perfil Sensorial</h4>
+                                        <div class="cupping-quick">
+                                            <span class="cupping-item">Aroma: 9.0 - Chocolate</span>
+                                            <span class="cupping-item">Sabor: 8.5 - Caramelo</span>
+                                            <span class="cupping-item">Corpo: 8.5 - Aveludado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="sustentabilidade" class="sustentabilidade-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Sustentabilidade</span>
+                <h2 class="section-title">Agronegócio Responsável</h2>
+                <p class="section-subtitle">
+                    Liderando a transição para uma agricultura mais sustentável, 
+                    o Paraná combina produtividade com responsabilidade ambiental e social.
+                </p>
+            </div>
+            
+            <div class="sustentabilidade-grid">
+                <div class="sustentabilidade-card">
+                    <div class="sustent-icon">🌱</div>
+                    <h3>Agricultura Regenerativa</h3>
+                    <p>Práticas que restauram a saúde do solo e aumentam a biodiversidade</p>
+                    <details class="sustent-details">
+                        <summary>Ver Práticas</summary>
+                        <ul class="sustent-features">
+                            <li>Sistema Plantio Direto em 85% da área</li>
+                            <li>Rotação de culturas obrigatória</li>
+                            <li>Cobertura vegetal permanente</li>
+                            <li>Redução de 40% no uso de defensivos</li>
+                            <li>Aumento de 25% na matéria orgânica</li>
+                        </ul>
+                    </details>
+                </div>
+                
+                <div class="sustentabilidade-card">
+                    <div class="sustent-icon">💧</div>
+                    <h3>Gestão Hídrica</h3>
+                    <p>Uso eficiente da água com tecnologias de precisão e conservação</p>
+                    <details class="sustent-details">
+                        <summary>Ver Tecnologias</summary>
+                        <ul class="sustent-features">
+                            <li>Irrigação por gotejamento</li>
+                            <li>Sensores de umidade do solo</li>
+                            <li>Captação de água da chuva</li>
+                            <li>Tratamento de efluentes</li>
+                            <li>Redução de 30% no consumo</li>
+                        </ul>
+                    </details>
+                </div>
+                
+                <div class="sustentabilidade-card">
+                    <div class="sustent-icon">🌳</div>
+                    <h3>Preservação Florestal</h3>
+                    <p>Manutenção e recuperação de áreas de preservação permanente</p>
+                    <details class="sustent-details">
+                        <summary>Ver Ações</summary>
+                        <ul class="sustent-features">
+                            <li>20% de área preservada</li>
+                            <li>Corredores ecológicos</li>
+                            <li>Reflorestamento com espécies nativas</li>
+                            <li>Programa de PSA</li>
+                            <li>Recuperação de nascentes</li>
+                        </ul>
+                    </details>
+                </div>
+                
+                <div class="sustentabilidade-card">
+                    <div class="sustent-icon">⚡</div>
+                    <h3>Energia Renovável</h3>
+                    <p>Transição energética com fontes limpas e renováveis</p>
+                    <details class="sustent-details">
+                        <summary>Ver Fontes</summary>
+                        <ul class="sustent-features">
+                            <li>Energia solar em 60% das propriedades</li>
+                            <li>Biogás de dejetos animais</li>
+                            <li>Biomassa de resíduos agrícolas</li>
+                            <li>Redução de 50% na pegada de carbono</li>
+                            <li>Autossuficiência energética</li>
+                        </ul>
+                    </details>
+                </div>
+                
+                <div class="sustentabilidade-card">
+                    <div class="sustent-icon">🔄</div>
+                    <h3>Economia Circular</h3>
+                    <p>Aproveitamento integral dos recursos e minimização de resíduos</p>
+                    <details class="sustent-details">
+                        <summary>Ver Processos</summary>
+                        <ul class="sustent-features">
+                            <li>Compostagem de resíduos orgânicos</li>
+                            <li>Reciclagem de embalagens</li>
+                            <li>Reaproveitamento de subprodutos</li>
+                            <li>Logística reversa implementada</li>
+                            <li>Zero desperdício</li>
+                        </ul>
+                    </details>
+                </div>
+                
+                <div class="sustentabilidade-card">
+                    <div class="sustent-icon">👥</div>
+                    <h3>Responsabilidade Social</h3>
+                    <p>Desenvolvimento das comunidades rurais e urbanas</p>
+                    <details class="sustent-details">
+                        <summary>Ver Programas</summary>
+                        <ul class="sustent-features">
+                            <li>Programas de capacitação</li>
+                            <li>Geração de 1,2M empregos</li>
+                            <li>Apoio à agricultura familiar</li>
+                            <li>Investimento em educação rural</li>
+                            <li>Inclusão digital no campo</li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologia" class="tecnologia-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Agricultura 4.0</span>
+                <h2 class="section-title">Inovação e Tecnologia</h2>
+                <p class="section-subtitle">
+                    O Paraná está na vanguarda da revolução tecnológica no campo, 
+                    utilizando inteligência artificial, IoT e biotecnologia para maximizar a eficiência.
+                </p>
+            </div>
+            
+            <div class="tecnologia-content">
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon">🛰️</div>
+                        <h3>Agricultura de Precisão</h3>
+                        <p>Tecnologia GPS e sensores para otimização de recursos</p>
+                        <details class="tech-details">
+                            <summary>Ver Tecnologias</summary>
+                            <div class="tech-stats">
+                                <div class="tech-stat">
+                                    <span class="tech-number">85%</span>
+                                    <span class="tech-label">das propriedades utilizam GPS</span>
+                                </div>
+                                <div class="tech-stat">
+                                    <span class="tech-number">30%</span>
+                                    <span class="tech-label">redução no uso de insumos</span>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <div class="tech-icon">🤖</div>
+                        <h3>Inteligência Artificial</h3>
+                        <p>IA para previsão de safras e detecção de pragas</p>
+                        <details class="tech-details">
+                            <summary>Ver Aplicações</summary>
+                            <div class="tech-stats">
+                                <div class="tech-stat">
+                                    <span class="tech-number">95%</span>
+                                    <span class="tech-label">precisão na detecção de pragas</span>
+                                </div>
+                                <div class="tech-stat">
+                                    <span class="tech-number">25%</span>
+                                    <span class="tech-label">aumento na produtividade</span>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <div class="tech-icon">🚁</div>
+                        <h3>Drones e Sensoriamento</h3>
+                        <p>Monitoramento aéreo e aplicação localizada</p>
+                        <details class="tech-details">
+                            <summary>Ver Dados</summary>
+                            <div class="tech-stats">
+                                <div class="tech-stat">
+                                    <span class="tech-number">5.000+</span>
+                                    <span class="tech-label">drones em operação</span>
+                                </div>
+                                <div class="tech-stat">
+                                    <span class="tech-number">60%</span>
+                                    <span class="tech-label">redução no tempo de aplicação</span>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <div class="tech-icon">🧬</div>
+                        <h3>Biotecnologia</h3>
+                        <p>Melhoramento genético e desenvolvimento de cultivares</p>
+                        <details class="tech-details">
+                            <summary>Ver Resultados</summary>
+                            <div class="tech-stats">
+                                <div class="tech-stat">
+                                    <span class="tech-number">200+</span>
+                                    <span class="tech-label">cultivares desenvolvidas</span>
+                                </div>
+                                <div class="tech-stat">
+                                    <span class="tech-number">40%</span>
+                                    <span class="tech-label">aumento na resistência</span>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                
+                <div class="inovacao-destaque">
+                    <h3>Centros de Pesquisa e Inovação</h3>
+                    <div class="centros-grid">
+                        <div class="centro-item">
+                            <h4>EMBRAPA Soja</h4>
+                            <p>Líder mundial em pesquisa de soja tropical</p>
+                            <details class="centro-details">
+                                <summary>Ver Projetos</summary>
+                                <ul class="centro-features">
+                                    <li>Desenvolvimento de cultivares resistentes</li>
+                                    <li>Pesquisa em fixação biológica de nitrogênio</li>
+                                    <li>Tecnologias de processamento</li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="centro-item">
+                            <h4>IAPAR-EMATER</h4>
+                            <p>Desenvolvimento de tecnologias adaptadas ao clima paranaense</p>
+                            <details class="centro-details">
+                                <summary>Ver Inovações</summary>
+                                <ul class="centro-features">
+                                    <li>Variedades adaptadas ao clima subtropical</li>
+                                    <li>Sistemas integrados de produção</li>
+                                    <li>Assistência técnica especializada</li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="centro-item">
+                            <h4>Universidades</h4>
+                            <p>UEL, UEM, UFPR - Formação de profissionais especializados</p>
+                            <details class="centro-details">
+                                <summary>Ver Cursos</summary>
+                                <ul class="centro-features">
+                                    <li>Agronomia e Engenharia Agrícola</li>
+                                    <li>Zootecnia e Medicina Veterinária</li>
+                                    <li>Pós-graduação em Agronegócio</li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="centro-item">
+                            <h4>Startups AgTech</h4>
+                            <p>Ecossistema de inovação com 150+ startups</p>
+                            <details class="centro-details">
+                                <summary>Ver Soluções</summary>
+                                <ul class="centro-features">
+                                    <li>Aplicativos de gestão agrícola</li>
+                                    <li>Sensores IoT para monitoramento</li>
+                                    <li>Plataformas de comercialização</li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cooperativas" class="cooperativas-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Cooperativismo</span>
+                <h2 class="section-title">Força do Cooperativismo</h2>
+                <p class="section-subtitle">
+                    As cooperativas paranaenses são pilares do agronegócio, 
+                    oferecendo suporte técnico, comercialização e agregação de valor aos produtores.
+                </p>
+            </div>
+            
+            <div class="cooperativas-stats">
+                <div class="coop-stat">
+                    <div class="coop-number">180+</div>
+                    <div class="coop-label">Cooperativas Ativas</div>
+                </div>
+                <div class="coop-stat">
+                    <div class="coop-number">250mil</div>
+                    <div class="coop-label">Cooperados</div>
+                </div>
+                <div class="coop-stat">
+                    <div class="coop-number">R$ 45bi</div>
+                    <div class="coop-label">Faturamento Anual</div>
+                </div>
+                <div class="coop-stat">
+                    <div class="coop-number">65%</div>
+                    <div class="coop-label">da Produção Agrícola</div>
+                </div>
+            </div>
+            
+            <div class="cooperativas-grid">
+                <div class="cooperativa-card">
+                    <h3>Coamo</h3>
+                    <p class="coop-location">Campo Mourão</p>
+                    <p class="coop-description">Maior cooperativa da América Latina em faturamento</p>
+                    <div class="coop-highlights">
+                        <span class="highlight-item">🌽 Grãos</span>
+                        <span class="highlight-item">⛽ Combustíveis</span>
+                        <span class="highlight-item">🏭 Industrialização</span>
+                    </div>
+                    <details class="coop-details">
+                        <summary>Ver Detalhes</summary>
+                        <ul class="coop-features">
+                            <li>Faturamento: R$ 15 bilhões/ano</li>
+                            <li>28 mil cooperados</li>
+                            <li>Presença em 4 estados</li>
+                            <li>Líder em recebimento de soja</li>
+                        </ul>
+                    </details>
+                </div>
+                
+                <div class="cooperativa-card">
+                    <h3>Cocamar</h3>
+                    <p class="coop-location">Maringá</p>
+                    <p class="coop-description">Referência em café e diversificação de culturas</p>
+                    <div class="coop-highlights">
+                        <span class="highlight-item">☕ Café</span>
+                        <span class="highlight-item">🌱 Soja</span>
+                        <span class="highlight-item">🏪 Varejo</span>
+                    </div>
+                    <details class="coop-details">
+                        <summary>Ver Detalhes</summary>
+                        <ul class="coop-features">
+                            <li>Faturamento: R$ 8 bilhões/ano</li>
+                            <li>15 mil cooperados</li>
+                            <li>Líder em café especial</li>
+                            <li>Rede de supermercados</li>
+                        </ul>
+                    </details>
+                </div>
+                
+                <div class="cooperativa-card">
+                    <h3>Copacol</h3>
+                    <p class="coop-location">Cafelândia</p>
+                    <p class="coop-description">Líder em avicultura e suinocultura integrada</p>
+                    <div class="coop-highlights">
+                        <span class="highlight-item">🐔 Aves</span>
+                        <span class="highlight-item">🐷 Suínos</span>
+                        <span class="highlight-item">🥛 Laticínios</span>
+                    </div>
+                    <details class="coop-details">
+                        <summary>Ver Detalhes</summary>
+                        <ul class="coop-features">
+                            <li>Faturamento: R$ 6 bilhões/ano</li>
+                            <li>12 mil cooperados</li>
+                            <li>Integração vertical completa</li>
+                            <li>Exportação para 40 países</li>
+                        </ul>
+                    </details>
+                </div>
+                
+                <div class="cooperativa-card">
+                    <h3>Integrada</h3>
+                    <p class="coop-location">Londrina</p>
+                    <p class="coop-description">Cooperativa de cooperativas com foco em grãos</p>
+                    <div class="coop-highlights">
+                        <span class="highlight-item">🌾 Trigo</span>
+                        <span class="highlight-item">🫘 Soja</span>
+                        <span class="highlight-item">🚛 Logística</span>
+                    </div>
+                    <details class="coop-details">
+                        <summary>Ver Detalhes</summary>
+                        <ul class="coop-features">
+                            <li>Faturamento: R$ 4 bilhões/ano</li>
+                            <li>8 cooperativas associadas</li>
+                            <li>Terminal portuário próprio</li>
+                            <li>Logística integrada</li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<h2 class="titulo">🧠 Jogo da Memória do Agro 🌱</h2>
+
+<div class="game-container">
+  <!-- 🐄 Vaca -->
+  <div class="card">
+    <input type="checkbox" id="card1">
+    <label for="card1">
+      <div class="front">❓</div>
+      <div class="back">🐄</div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card2">
+    <label for="card2">
+      <div class="front">❓</div>
+      <div class="back">🐄</div>
+    </label>
+  </div>
+
+  <!-- 🌽 Milho -->
+  <div class="card">
+    <input type="checkbox" id="card3">
+    <label for="card3">
+      <div class="front">❓</div>
+      <div class="back">🌽</div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card4">
+    <label for="card4">
+      <div class="front">❓</div>
+      <div class="back">🌽</div>
+    </label>
+  </div>
+
+  <!-- 🥔 Batata -->
+  <div class="card">
+    <input type="checkbox" id="card5">
+    <label for="card5">
+      <div class="front">❓</div>
+      <div class="back">🥔</div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card6">
+    <label for="card6">
+      <div class="front">❓</div>
+      <div class="back">🥔</div>
+    </label>
+  </div>
+
+  <!-- 🐖 Porco -->
+  <div class="card">
+    <input type="checkbox" id="card7">
+    <label for="card7">
+      <div class="front">❓</div>
+      <div class="back">🐖</div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card8">
+    <label for="card8">
+      <div class="front">❓</div>
+      <div class="back">🐖</div>
+    </label>
+  </div>
+
+  <!-- 🐑 Ovelha -->
+  <div class="card">
+    <input type="checkbox" id="card9">
+    <label for="card9">
+      <div class="front">❓</div>
+      <div class="back">🐑</div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card10">
+    <label for="card10">
+      <div class="front">❓</div>
+      <div class="back">🐑</div>
+    </label>
+  </div>
+
+  <!-- 🍇 Uva -->
+  <div class="card">
+    <input type="checkbox" id="card11">
+    <label for="card11">
+      <div class="front">❓</div>
+      <div class="back">🍇</div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card12">
+    <label for="card12">
+      <div class="front">❓</div>
+      <div class="back">🍇</div>
+    </label>
+  </div>
+
+  <!-- 🥕 Cenoura -->
+  <div class="card">
+    <input type="checkbox" id="card13">
+    <label for="card13">
+      <div class="front">❓</div>
+      <div class="back">🥕</div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card14">
+    <label for="card14">
+      <div class="front">❓</div>
+      <div class="back">🥕</div>
+    </label>
+  </div>
+
+  <!-- 🧄 Alho -->
+  <div class="card">
+    <input type="checkbox" id="card15">
+    <label for="card15">
+      <div class="front">❓</div>
+      <div class="back">🧄</div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card16">
+    <label for="card16">
+      <div class="front">❓</div>
+      <div class="back">🧄</div>
+    </label>
+  </div>
+</div>
+<title>Galeria do Campo</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="galeria-container">
+    <h1>Algumas fotos do Campo</h1>
+    <div class="galeria">
+      <div class="foto"><img src="Imagem/19 - Animais campo.jpg" alt="Foto do campo 1"></div>
+      <div class="foto"><img src="Imagem/14 - plantação.jpg" alt="Foto do campo 2"></div>
+      <div class="foto"><img src="Imagem/10 - plantação.jpg" alt="Foto do campo 3"></div>
+      <div class="foto"><img src="Imagem/18 - plantação.jpg" alt="Foto do campo 4"></div>
+      <div class="foto"><img src="Imagem/16 - fogão a lenha1.jpg" alt="Foto do campo 5"></div>
+      <div class="foto"><img src="Imagem/24 - Animais campo.jpg" alt="Foto do campo 6"></div>
+    </div>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeria de Áudios</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="galeria-container">
+    <h1>Alguns áudios do Campo</h1>
+    <div class="galeria">
+      <div class="audio">
+        <audio controls>
+          <source src="Imagem/AMANHECER NA FAZENDA SONS De PASSARINHOS E GALINHAS- Para relaxar e renovar as energias..mp3" type="audio/mpeg">
+          Seu navegador não suporta áudio.
+        </audio>
+      </div>
+      <div class="audio">
+        <audio controls>
+          <source src="Imagem/Som de Chuva na Fazenda.mp3" type="audio/mpeg">
+          Seu navegador não suporta áudio.
+        </audio>
+      </div>
+      <div class="audio">
+        <audio controls>
+          <source src="Imagem/PÔR DO SOL, SONS E CORES DO ENTARDECER NO CAMPO, RELAXAMENTO CAIPIRA, CANTO DE PÁSSAROS, NATUREZA..mp3" type="audio/mpeg">
+          Seu navegador não suporta áudio.
+        </audio>
+            <h1>Referências:</h1>
+            <p>https://www.youtube.com/watch?v=6qHevnEWeDg</p>
+            <p>https://www.youtube.com/watch?v=0rmoAruy_wo</p>
+            <p>https://www.youtube.com/watch?v=v_cItb3kEQ4</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+  </div>
+<footer id="contato" class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                            <img class="footer-logo" src="Imagem/logo 2.png" alt="logo">
+                        <h3>AgroParaná</h3>
+                    </div>
+                    <p class="footer-description">
+                        Conectando a excelência do agronegócio paranaense com o mundo, 
+                        promovendo sustentabilidade, inovação e qualidade premium.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h4>Agronegócio</h4>
+                    <ul>
+                        <li><a href="#agronegocio">Estatísticas</a></li>
+                        <li><a href="#agronegocio">Cadeia Produtiva</a></li>
+                        <li><a href="#tecnologia">Tecnologia</a></li>
+                        <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Receitas Premium</h4>
+                    <ul>
+                        <li><a href="#receitas">Proteínas</a></li>
+                        <li><a href="#receitas">Grãos</a></li>
+                        <li><a href="#receitas">Laticínios</a></li>
+                        <li><a href="#receitas">Cafés Especiais</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Cooperativas</h4>
+                    <ul>
+                        <li><a href="#cooperativas">Coamo</a></li>
+                        <li><a href="#cooperativas">Cocamar</a></li>
+                        <li><a href="#cooperativas">Copacol</a></li>
+                        <li><a href="#cooperativas">Integrada</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>contato@agroparana.com.br</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>(41) 3000-0000</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Curitiba, Paraná - Brasil</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 Campo na cidade. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Certificações</a>
+                    <a href="#">Sustentabilidade</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Modais das Receitas (versão completa) -->
+
+<!-- Modal Churrasco -->
+<div class="recipe-modal" id="churrasco-modal">
+    <div class="modal-overlay">
+        <label for="modal-churrasco" class="modal-close-overlay"></label>
+    </div>
+    <div class="modal-container">
+        <div class="modal-header">
+            <label for="modal-churrasco" class="modal-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </label>
+        </div>
+        
+        <div class="modal-content">
+            <div class="recipe-header">
+                <div class="recipe-emoji">🥩</div>
+                <div class="recipe-info">
+                    <span class="recipe-category">Proteína Bovina Premium</span>
+                    <h1 class="recipe-title">Churrasco Angus Paranaense</h1>
+                    <div class="recipe-certifications">
+                        <span class="cert-badge">🏆 Certificado BPA</span>
+                        <span class="cert-badge">🌱 Carbono Neutro</span>
+                        <span class="cert-badge">🐄 Bem-Estar Animal</span>
+                    </div>
+                    <div class="recipe-meta">
+                        <div class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            <span>3h</span>
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                            </svg>
+                            <span>Avançado</span>
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                            </svg>
+                            <span>8-10 pessoas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-content">
+                <div class="rastreabilidade-section">
+                    <h2 class="section-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"/>
+                            <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                            <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                        </svg>
+                        Rastreabilidade e Certificações
+                    </h2>
+                    <div class="rastreabilidade-info">
+                        <div class="trace-item">
+                            <strong>Fazenda de Origem:</strong> Fazenda Santa Helena - Castro/PR
+                        </div>
+                        <div class="trace-item">
+                            <strong>Raça:</strong> Angus Puro de Origem (PO)
+                        </div>
+                        <div class="trace-item">
+                            <strong>Sistema de Criação:</strong> Pastejo Rotacionado Intensivo
+                        </div>
+                        <div class="trace-item">
+                            <strong>Alimentação:</strong> Pasto + Suplementação com Grãos Próprios
+                        </div>
+                        <div class="trace-item">
+                            <strong>Certificações:</strong> BPA, Rainforest Alliance, Carbon Trust
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ingredients-section">
+                    <h2 class="section-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3h18v18H3zM9 9h6v6H9z"/>
+                        </svg>
+                        Ingredientes Premium
+                    </h2>
+                    <ul class="ingredients-list">
+                        <li class="ingredient-item">3kg de picanha Angus certificada</li>
+                        <li class="ingredient-item">1,5kg de costela bovina maturada</li>
+                        <li class="ingredient-item">800g de linguiça colonial artesanal</li>
+                        <li class="ingredient-item">300g de sal grosso marinho</li>
+                        <li class="ingredient-item">4 dentes de alho roxo orgânico</li>
+                        <li class="ingredient-item">2 colheres de pimenta-do-reino moída na hora</li>
+                        <li class="ingredient-item">3 colheres de ervas finas (alecrim, tomilho, orégano)</li>
+                        <li class="ingredient-item">1 maço de salsinha orgânica</li>
+                        <li class="ingredient-item">Carvão vegetal certificado FSC</li>
+                        <li class="ingredient-item">Lenha de eucalipto para defumação</li>
+                    </ul>
+                </div>
+
+                <div class="preparation-section">
+                    <h2 class="section-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Técnica de Preparo Profissional
+                    </h2>
+                    <ol class="preparation-list">
+                        <li class="step-item">
+                            <span class="step-number"></span>
+                            <span class="step-text">Retire a carne da refrigeração 2 horas antes para atingir temperatura ambiente (18-20°C).</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number"></span>
+                            <span class="step-text">Prepare o fogo com carvão vegetal certificado, aguardando formar brasas uniformes sem chamas.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number"></span>
+                            <span class="step-text">Tempere a picanha apenas com sal grosso marinho, aplicando 40 minutos antes do preparo.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number"></span>
+                            <span class="step-text">Para a costela, prepare uma marinada com alho, pimenta-do-reino e ervas finas.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number"></span>
+                            <span class="step-text">Inicie o cozimento pela costela, mantendo altura de 25cm das brasas.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number"></span>
+                            <span class="step-text">Após 1 hora, adicione a picanha, controlando a temperatura com termômetro infravermelho.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number"></span>
+                            <span class="step-text">Vire as carnes a cada 20 minutos, sempre no sentido horário.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number"></span>
+                            <span class="step-text">Adicione lenha de eucalipto para defumação leve nos últimos 30 minutos.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number"></span>
+                            <span class="step-text">A linguiça deve ser colocada apenas nos últimos 25 minutos.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number"></span>
+                            <span class="step-text">Monitore a temperatura interna: 52°C para mal passado, 60°C para ao ponto.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number"></span>
+                            <span class="step-text">Deixe a carne descansar por 15 minutos em local aquecido antes de fatiar.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number"></span>
+                            <span class="step-text">Sirva imediatamente com acompanhamentos tradicionais.</span>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="tips-section">
+                    <h2 class="section-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                        Dicas do Especialista
+                    </h2>
+                    <ul class="tips-list">
+                        <li class="tip-item">💡 Use termômetro infravermelho para controle preciso da temperatura</li>
+                        <li class="tip-item">💡 Carvão vegetal certificado garante queima uniforme e sabor neutro</li>
+                        <li class="tip-item">💡 O descanso da carne é fundamental para redistribuição dos sucos</li>
+                        <li class="tip-item">💡 Defumação leve com eucalipto adiciona complexidade aromática</li>
+                        <li class="tip-item">💡 Corte sempre contra as fibras para máxima maciez</li>
+                    </ul>
+                </div>
+
+                <div class="sustainability-section">
+                    <h2 class="section-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                        Impacto Sustentável
+                    </h2>
+                    <div class="sustainability-metrics">
+                        <div class="metric-item">
+                            <span class="metric-icon">🌱</span>
+                            <span class="metric-value">-40%</span>
+                            <span class="metric-label">Emissão de CO₂</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-icon">💧</span>
+                            <span class="metric-value">-30%</span>
+                            <span class="metric-label">Uso de Água</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-icon">🌾</span>
+                            <span class="metric-value">+25%</span>
+                            <span class="metric-label">Biodiversidade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
