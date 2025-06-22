@@ -5,7 +5,7 @@
 
 ## Minha trajetória no projeto
 
-Olá! Meu nome é **Luis Henrique Ramthun Neima**, sou aluno do **2º ano do Ensino Médio**, no itinerário de exatas, e tenho muito interesse pela área de programação.
+Olá! Meu nome é **Luis Henrique**, sou aluno do **2º ano do Ensino Médio**, no itinerário de exatas, e tenho muito interesse pela área de programação.
 
 Quando surgiu a oportunidade de participar do Concurso Agrinho, fiquei animado com o desafio de construir um site educativo e informativo. Durante esse processo, aprendi muito sobre **estruturação de páginas, organização de conteúdo, personalização de estilos** e, principalmente, sobre o **tema proposto**. Precisei realizar muitas pesquisas e, com isso, acabei descobrindo um outro lado do nosso estado e de um estilo de vida bem diferente do meu.
 
