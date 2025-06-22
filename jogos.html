@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo na cidade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body id="topo">
+    <div class="grain-overlay"></div>
+
+      <!-- Checkbox para menu mobile -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <img class="logo" src="Imagem/Logo.png" alt="Imagem do campo e da cidade em conexão">
+          </div>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Início</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html #agronegocio" class="nav-link">Agronegócio</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html #sustentabilidade" class="nav-link">Sustentabilidade</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html #cooperativas" class="nav-link">Cooperativas</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html #contato" class="nav-link">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html #receitas" class="nav-link">Receitas</a>
+            </li>
+            <li class="nav-item">
+              <a href="Imersão.html" class="nav-link external-link">Imersão</a>
+            </li>
+            <li class="nav-item">
+              <a href="jogos.html" class="nav-link external-link">Jogos</a>
+            </li>
+          </ul>
+          <label for="menu-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </label>
+        </div>
+      </nav>
+    </header>
+
+    <main style="padding-top: 100px;">
+      <section class="jogo-section container">
+        <!-- Quizizz -->
+        <div class="preview-box">
+          <img src="Imagem/Geral11 - Quiziz.png" alt="3 adolescentes jogando quiziz sobre o campo no computador, na escola" class="game-preview-img">
+          <h3>Quiz: A origem dos ingredientes</h3>
+          <label for="quiz-toggle" class="open-modal-btn">Clique aqui para começar o quiz!</label>
+        </div>
+
+        <input type="checkbox" id="quiz-toggle" hidden>
+        <div class="modal-overlay-jogos quiz-modal">
+          <section class="modal-content long">
+            <label for="quiz-toggle" class="close-btn-circle">✖</label>
+
+            <div class="pergunta">
+              <h3>1. De onde vem o leite de caixinha?</h3>
+              <input type="radio" name="q0" id="q0a"><label for="q0a">🌱 Campo</label>
+              <input type="radio" name="q0" id="q0b"><label for="q0b">🏙️ Cidade</label>
+              <input type="radio" name="q0" id="q0c"><label for="q0c">🔄 Ambos</label>
+              <div class="explicacao">Ambos: o leite vem do campo, mas é processado e embalado na cidade.</div>
+            </div>
+
+
+            <div class="pergunta">
+              <h3>2. O refrigerante tem origem no...?</h3>
+              <input type="radio" name="q1" id="q1a"><label for="q1a">🌱 Campo</label>
+              <input type="radio" name="q1" id="q1b"><label for="q1b">🏙️ Cidade</label>
+              <input type="radio" name="q1" id="q1c"><label for="q1c">🔄 Ambos</label>
+              <div class="explicacao">Cidade: o refrigerante é uma bebida criada e produzida na indústria urbana.</div>
+            </div>
+
+
+            <div class="pergunta">
+              <h3>3. De onde vem o queijo artesanal (como o queijo minas)?</h3>
+              <input type="radio" name="q2" id="q2a"><label for="q2a">🌱 Campo</label>
+              <input type="radio" name="q2" id="q2b"><label for="q2b">🏙️ Cidade</label>
+              <input type="radio" name="q2" id="q2c"><label for="q2c">🔄 Ambos</label>
+              <div class="explicacao">Campo: o queijo artesanal é feito por produtores rurais com leite fresco.</div>
+            </div>
+
+
+            <div class="pergunta">
+              <h3>4. O pinhão é típico de qual ambiente?</h3>
+              <input type="radio" name="q3" id="q3a"><label for="q3a">🌱 Campo</label>
+              <input type="radio" name="q3" id="q3b"><label for="q3b">🏙️ Cidade</label>
+              <input type="radio" name="q3" id="q3c"><label for="q3c">🔄 Ambos</label>
+              <div class="explicacao">Campo: o pinhão é colhido das araucárias, árvores nativas do campo.</div>
+            </div>
+
+
+            <div class="pergunta">
+              <h3>5. A batata frita de fast food vem de...?</h3>
+              <input type="radio" name="q4" id="q4a"><label for="q4a">🌱 Campo</label>
+              <input type="radio" name="q4" id="q4b"><label for="q4b">🏙️ Cidade</label>
+              <input type="radio" name="q4" id="q4c"><label for="q4c">🔄 Ambos</label>
+              <div class="explicacao">Ambos: a batata é cultivada no campo e depois processada nas indústrias urbanas.</div>
+            </div>
+
+
+            <div class="pergunta">
+              <h3>6. De onde vem o frango empanado pronto?</h3>
+              <input type="radio" name="q5" id="q5a"><label for="q5a">🌱 Campo</label>
+              <input type="radio" name="q5" id="q5b"><label for="q5b">🏙️ Cidade</label>
+              <input type="radio" name="q5" id="q5c"><label for="q5c">🔄 Ambos</label>
+              <div class="explicacao">Ambos: o frango vem do campo, mas o empanamento e preparo industrial acontecem na cidade.</div>
+            </div>
+
+
+            <div class="pergunta">
+              <h3>7. De onde vem o mel de abelha?</h3>
+              <input type="radio" name="q6" id="q6a"><label for="q6a">🌱 Campo</label>
+              <input type="radio" name="q6" id="q6b"><label for="q6b">🏙️ Cidade</label>
+              <input type="radio" name="q6" id="q6c"><label for="q6c">🔄 Ambos</label>
+              <div class="explicacao">Campo: o mel é produzido pelas abelhas em áreas rurais com vegetação.</div>
+            </div>
+
+
+            <div class="pergunta">
+              <h3>8. A goiabada vem de onde?</h3>
+              <input type="radio" name="q7" id="q7a"><label for="q7a">🌱 Campo</label>
+              <input type="radio" name="q7" id="q7b"><label for="q7b">🏙️ Cidade</label>
+              <input type="radio" name="q7" id="q7c"><label for="q7c">🔄 Ambos</label>
+              <div class="explicacao">Ambos: a goiaba vem do campo e vira goiabada nas fábricas da cidade.</div>
+            </div>
+
+
+            <div class="pergunta">
+              <h3>9. A farinha de mandioca tem origem no...?</h3>
+              <input type="radio" name="q8" id="q8a"><label for="q8a">🌱 Campo</label>
+              <input type="radio" name="q8" id="q8b"><label for="q8b">🏙️ Cidade</label>
+              <input type="radio" name="q8" id="q8c"><label for="q8c">🔄 Ambos</label>
+              <div class="explicacao">Campo: a mandioca é colhida e processada em pequenas agroindústrias rurais.</div>
+            </div>
+
+
+            <div class="pergunta">
+              <h3>10. De onde vem a alface que comemos?</h3>
+              <input type="radio" name="q9" id="q9a"><label for="q9a">🌱 Campo</label>
+              <input type="radio" name="q9" id="q9b"><label for="q9b">🏙️ Cidade</label>
+              <input type="radio" name="q9" id="q9c"><label for="q9c">🔄 Ambos</label>
+              <div class="explicacao">Ambos: tradicionalmente do campo, mas hoje também cultivada em hortas urbanas.</div>
+            </div>
+
+          </section>
+        </div>
+
+        <!-- Jogo da Memória -->
+        <!-- Memória Preview Box -->
+        <div class="preview-box">
+          <img src="Imagem/Geral12 - Memoria.png" alt="Imagem do Jogo da Memória" class="game-preview-img">
+          <h3>Jogo da Memória: Ingredientes do Campo</h3>
+          <label for="memory-toggle" class="open-modal-btn">Clique aqui para jogar!</label>
+        </div>
+
+        <!-- Memória Modal -->
+        <input type="checkbox" id="memory-toggle" hidden>
+        <div class="modal-overlay-jogos memory-modal">
+          <section class="modal-content">
+            <label for="memory-toggle" class="close-btn-circle">✖</label>
+            <div class="memory-game">
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🥔 Aipim</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🌰 Pinhão</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🍯 Mel de abelha</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🧀 Queijo artesanal</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🥩 Carne bovina</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🥛 Leite</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🌾 Farinha de mandioca</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🌽 Milho</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🥚 Ovos caipiras</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🍠 Batata-doce</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🎃 Abóbora</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🍯 Mel de abelha</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🥔 Aipim</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🌰 Pinhão</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🧀 Queijo artesanal</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🥩 Carne bovina</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🥛 Leite</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🌾 Farinha de mandioca</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🌽 Milho</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🥚 Ovos caipiras</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🍠 Batata-doce</div></div></label>
+              <label class="card"><input type="checkbox"><div class="card-inner"><div class="card-front">❓</div><div class="card-back">🎃 Abóbora</div></div></label>
+            </div>
+
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-main">
+            <div class="footer-brand">
+              <div class="footer-logo">
+                <img src="Imagem/logo 2.png" alt="Imagem do campo e da cidade em conexão" class="logo2">
+                <h3>Jogos Educativos - Campo na Cidade</h3>
+              </div>
+              <p class="footer-description">
+                Preservando e compartilhando os sons,
+                sabores e sensações do campo na cidade.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-content">
+            <p>&copy; 2025 Projeto Agrinho – Desenvolvido por Luis Henrique Ramthun Neima. Todos os direitos reservados.</p>
+            <div class="footer-links">
+              <a href="#">Política de Privacidade</a>
+              <a href="#">Termos de Uso</a>
+              <a href="#">Cookies</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
