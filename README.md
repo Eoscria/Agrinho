@@ -70,4 +70,10 @@ Agradeço por visitar meu projeto e por compartilhar essa experiência de aprend
 
 ---
 
+## Acesse o site do projeto:
+
+[https://eoscria.github.io/Agrinho/](https://eoscria.github.io/Agrinho/)
+
+---
+
 #FestejandoAConexaoCampoCidade #agrinho #agrinho2025
