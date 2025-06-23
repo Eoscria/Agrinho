@@ -2767,45 +2767,124 @@
     color: white;
   }
 
-
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Estados de foco para acessibilidade */
+  .nav-link:focus,
+  .btn-primary:focus,
+  .btn-secondary:focus,
+  .btn-accordion:focus,
+  .btn-modal:focus,
+  .modal-close:focus {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+    border-radius: var(--border-radius-sm);
+  }
+  
+  /* Estados ativos */
+  .nav-link:active,
+  .btn-primary:active,
+  .btn-secondary:active,
+  .btn-accordion:active,
+  .btn-modal:active {
+    transform: scale(0.98);
+  }
+  
+  /* Micro-interações */
+  .receita-card:hover .card-emoji {
+    transform: scale(1.1) rotate(5deg);
+    transition: var(--transition);
+  }
+  
+  .agro-stat-card:hover .stat-icon {
+    transform: scale(1.1);
+    transition: var(--transition);
+  }
+  
+  .tech-card:hover .tech-icon {
+    transform: scale(1.1) rotate(5deg);
+    transition: var(--transition);
+  }
 
 
 /* Responsividade */
-  @media (max-width: 1024px) {
-    .receitas-grid {
-      grid-template-columns: repeat(2, 1fr)
+  @media (max-width: 480px) {
+    .container {
+      padding: 0 16px;
     }
   
-    .receita-card.featured {
-      grid-column: span 1;
-      display: block;
+    .hero-content {
+      padding: 0 16px;
     }
   
-    .agro-stats-grid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-  
-    .cadeia-grid {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-  
-    .tech-grid {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    .agronegocio-section,
+    .receitas-section,
+    .sustentabilidade-section,
+    .tecnologia-section,
+    .cooperativas-section {
+      padding: 80px 0;
     }
   
     .cooperativas-stats {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: 1fr;
     }
   
-    .cooperativas-grid {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
     }
-
-    .memory-game {
-      grid-template-columns: repeat(4, 1fr);
+  
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .modal-container {
+      width: 98%;
+      margin: 1vh auto;
+      max-height: 98vh;
+      border-radius: var(--border-radius-sm);
+    }
+  
+    .recipe-header {
+      padding: 1.5rem 1rem;
+    }
+  
+    .recipe-title {
+      font-size: 1.75rem;
+    }
+  
+    .recipe-content {
+      padding: 1rem;
+    }
+  
+    .section-title {
+      font-size: 1.25rem;
+    }
+  
+    .tips-section,
+    .sustainability-section {
+      padding: 1.5rem;
+    }
+  
+    .sustainability-metrics {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero-stats {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .stat-item {
+      min-width: 200px;
     }
   }
-  
+ 
   @media (max-width: 768px) {
     .hamburger {
       display: flex;
@@ -2824,6 +2903,19 @@
       box-shadow: var(--shadow-lg);
       padding: 2rem 0;
       gap: 1.5rem;
+    }
+
+    h1, h2, h3 {
+      font-size: 1.2em;
+    }
+
+    .container {
+      padding: 10px;
+    }
+
+    .preview-box img {
+      width: 100%;
+      height: auto;
     }
   
     .hero {
@@ -2981,122 +3073,65 @@
     }
   }
   
-  @media (max-width: 480px) {
-    .container {
-      padding: 0 16px;
+  @media (max-width: 1024px) {
+    .receitas-grid {
+      grid-template-columns: repeat(2, 1fr)
     }
   
-    .hero-content {
-      padding: 0 16px;
+    .receita-card.featured {
+      grid-column: span 1;
+      display: block;
     }
   
-    .agronegocio-section,
-    .receitas-section,
-    .sustentabilidade-section,
-    .tecnologia-section,
-    .cooperativas-section {
-      padding: 80px 0;
+    .agro-stats-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  
+    .cadeia-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  
+    .tech-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
   
     .cooperativas-stats {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
   
-    .hero-buttons {
-      flex-direction: column;
-      align-items: center;
+    .cooperativas-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
-  
-    .btn-primary,
-    .btn-secondary {
-      width: 100%;
-      justify-content: center;
-    }
-  
-    .modal-container {
-      width: 98%;
-      margin: 1vh auto;
-      max-height: 98vh;
-      border-radius: var(--border-radius-sm);
-    }
-  
-    .recipe-header {
-      padding: 1.5rem 1rem;
-    }
-  
-    .recipe-title {
-      font-size: 1.75rem;
-    }
-  
-    .recipe-content {
-      padding: 1rem;
-    }
-  
-    .section-title {
-      font-size: 1.25rem;
-    }
-  
-    .tips-section,
-    .sustainability-section {
-      padding: 1.5rem;
-    }
-  
-    .sustainability-metrics {
-      grid-template-columns: 1fr;
-    }
-  
-    .hero-stats {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .stat-item {
-      min-width: 200px;
+
+    .memory-game {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
   
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .nav-menu {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 6rem 0;
+    }
   }
-  
-  /* Estados de foco para acessibilidade */
-  .nav-link:focus,
-  .btn-primary:focus,
-  .btn-secondary:focus,
-  .btn-accordion:focus,
-  .btn-modal:focus,
-  .modal-close:focus {
-    outline: 2px solid var(--accent-gold);
-    outline-offset: 2px;
-    border-radius: var(--border-radius-sm);
-  }
-  
-  /* Estados ativos */
-  .nav-link:active,
-  .btn-primary:active,
-  .btn-secondary:active,
-  .btn-accordion:active,
-  .btn-modal:active {
-    transform: scale(0.98);
-  }
-  
-  /* Micro-interações */
-  .receita-card:hover .card-emoji {
-    transform: scale(1.1) rotate(5deg);
-    transition: var(--transition);
-  }
-  
-  .agro-stat-card:hover .stat-icon {
-    transform: scale(1.1);
-    transition: var(--transition);
-  }
-  
-  .tech-card:hover .tech-icon {
-    transform: scale(1.1) rotate(5deg);
-    transition: var(--transition);
-  }
-  
+
   /* Print styles */
   @media print {
     .header,
@@ -3127,4 +3162,3 @@
       transform: none !important;
     }
   }
-  

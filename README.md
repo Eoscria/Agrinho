@@ -48,6 +48,20 @@ Adicionei ao repositório a **licença MIT,** permitindo o uso livre do projeto 
 
 ---
 
+### Créditos de imagens e recursos visuais
+
+As imagens utilizadas neste site foram criadas com o auxílio de ferramentas de inteligência artificial, por meio da plataforma ChatGPT com geração de imagens via prompts descritivos (DALL·E).  
+
+Também foram utilizadas fotos feitas pela equipe responsável do projeto, com autorização verbal dos participantes para uso educacional e de divulgação deste trabalho.  
+
+Todas as imagens foram selecionadas, organizadas e adaptadas por mim, com o objetivo de enriquecer a experiência de quem visita o site.
+
+**Ferramentas utilizadas:**  
+- Geração de imagens por IA (ChatGPT – DALL·E)  
+- Capturas fotográficas feitas pela equipe responsável do projeto (com autorização verbal)
+
+---
+
 ## Agradecimento final
 
 Este site foi desenvolvido por, **Luis Henrique Ramthun Neima,** como parte da minha participação no **Concurso Agrinho 2025 – Categoria Programação.**
